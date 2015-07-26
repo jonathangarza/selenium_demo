@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Selenium - Browser Automation</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Jonathan Garza">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Selenium</h1>
+					<h3>Se</h3>
+					<p>
+						<small>Created by <a href="http://jonathancode.com">Jonathan Garza</a> <a href="http://twitter.com/"></a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>What is Selenium?</h2>
+					<p>
+
+						Selenium is a chemical element with symbol Se and atomic number 34. It is a nonmetal with properties that are intermediate between those of its periodic table column-adjacent chalcogen elements sulfur and tellurium. It rarely occurs in its elemental state in nature, or as pure ore compounds. Selenium (Greek σελήνη selene meaning "Moon") was discovered in 1817 by Jöns Jacob Berzelius, who noted the similarity of the new element to the previously known tellurium (named for the Earth).
+					</p>
+
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				<section>
+					<h1>Selenium - PyTest</h1>
+					<h3>Browser Automation and testing in Python</h3>
+					<p>
+						<small>Created by <a href="http://jonathancode.com">Jonathan Garza</a> <a href="http://twitter.com/"></a></small>
+					</p>
+				</section>
+				<section>
+					<h2>What is <a href="http://www.seleniumhq.org/">SeleniumHQ</a>?</h2>
+					<p>
+						Selenium automates browsers. That's it! What you do with that power is entirely up to you. Primarily, it is for automating web applications for testing purposes, but is certainly not limited to just that. Boring web-based administration tasks can (and should!) also be automated as well.
+					</p>
+					<p>
+						Selenium has the support of some of the largest browser vendors who have taken (or are taking) steps to make Selenium a native part of their browser. It is also the core technology in countless other browser automation tools, APIs and frameworks.
+					</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				<section>
+					<h2>Let's see Selenium in action</h2>
+					<p>
+					</p>
+
+					<aside class="notes">
+						Demo python order_tacos.py
+					</aside>
+				</section>
+								<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Unit Tests vs Functional Tests</h2>
+						<p>Let’s review. There are basically 2 kinds of automated tests: Unit and Functional.
+						</p>
+						<!--<a href="#" class="navigate-down">down</a>.-->
+						<a href="#" class="image navigate-down">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section>
+						<h2>Unit Tests</h2>
+						<p>Unit tests are written from the developer’s perspective, and typically target a method or a class (did my sort method sort properly?).</p>
+					</section>
+					<section>
+						<h2>Functional Tests</h2>
+						<p>
+							Functional tests (sometimes referred to as Integration tests by who prefer the extra syllable) are written from the user’s perspective, and usually test the interaction between multiple building blocks of the application (is the user able to log in? Can she update her account?).
+						</p>
+
+					</section>
+					<section>
+						<h2></h2>
+						<p>
+							"Unit testing makes sure you are using quality ingredients. Functional testing makes sure your application doesn't taste like crap." - Brett Jones
+						</p>
+
+					</section>
+				</section>
+
+				<section>
+					<h2>Let's see Selenium with PyPE</h2>
+					<p>
+					</p>
+
+					<aside class="notes">
+						Several Test Made the html title fail.
+						Demo py.test -s -v functional_tests/functional_tests.py
+					</aside>
+				</section>
+
+				<section>
+					<h2>Testing considerations with UTDirect</h2>
+
+					<p>"Please ensure that when you write your load testing scripts that you cache the authentication session information of your user(s). The goal of your load testing should be to test your application, not UTLogin." -Dustin Slater</p>
+					<p></p>
+					<ul>
+						<li>Mock with PyPE app can fake UTDirect login process</li>
+						<li>PyTest fixtures</li>
+						<!--<li>Don't have to remember assert function names</li>-->
+					</ul>
+				</section>
+				<section>
+				<h2>PyTest</h2>
+				<p>Helps you write better programs</p>
+				<ul>
+					<li>No boilerplate code</li>
+					<li>test discovery</li>
+					<li>Don't have to remember assert function names</li>
+				</ul>
+				</p>
+				</section>
+
+				<section>
+					<h2>PyTest</h2>
+					<p>Do this...</p>
+					<pre><code data-trim contenteditable>
+def test_true():
+  assert 1, True
+					</code></pre>
+					<p>Instead of...</p>
+					<pre><code data-trim contenteditable>
+import unittest
+
+class TestMyStuff(unittest.TestCase):
+
+  def test_the_obvious(self):
+    self.assertEqual(True, True)
+
+if __name__ == '__main__':
+    unittest.main()
+					</code></pre>
+				</section>
+				<section>
+					<h1>More to come...</h1>
+					<!--<h3>BY Jonathan Garza</h3>-->
+				</section>
+				<section>
+					<h1>THE END</h1>
+					<h3>BY Jonathan Garza</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
